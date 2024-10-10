@@ -1,0 +1,488 @@
+html, body {
+  height: 100%;
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+:root {
+  --primary-color: #232323;
+  --secondary-color: #313131;
+  --secondary-hover: #373737;
+}
+
+body {
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 0 1rem 3rem;
+    /*background:rgb(35, 35, 35) 100%;*/
+    background: var(--primary-color) 100%;
+    display: block;
+
+    font-family: 'Inter', sans-serif;
+}
+  hr {
+    height: 1px;
+    background: var(--secondary-hover);
+    font-size: 0;
+    border: 0;
+  }
+
+  .main { 
+    padding: 0 1rem 3rem;
+    margin: 5rem 0;   
+    color: whitesmoke;
+    height: auto;
+    min-height: 100vh;
+  }
+
+.hello {
+  margin: 16px 0 40px;
+}
+
+  .badge {
+    position: fixed;
+    top: 25px;
+    right: 5%;
+    z-index: 10;
+  }
+
+  .badge :hover {
+    rotate: 10deg;
+  }
+
+  .cooking-arena {
+    border-radius: 20px;
+    outline-style: dotted;
+  }
+
+  .terms-and-conditions {
+    max-width: 600px;
+    display: block;
+    flex-direction:column;
+    height: 80%;
+    color:whitesmoke
+  }
+
+  .navigation {
+    max-width: auto;
+    width: auto;
+    text-align: left;
+    display:inline-block;
+    height: 80%;
+    color:whitesmoke;
+    padding: 0 0 2rem;
+    font-size: 18px;
+  }   
+
+  .content {
+    max-width: 600px;
+    display: flex;
+    flex-direction:column;
+    color:whitesmoke
+  }
+
+  ::selection {
+    background: whitesmoke;
+    color:black;
+  }
+  
+  .nav2::before {
+    content:"/";
+    color: grey
+  }
+
+.recomendations {
+  border: 1px dashed;
+  border-radius: 12px;
+  padding: 15px;
+  width: 300px;
+}
+
+.recomendations p {
+  margin: 0px 0px 10px;
+}
+
+.recomendations ul {
+  list-style-type: none;
+  margin: 0 0 5px;
+  padding-left: 10px;
+}
+
+.recomendations ul li::before {
+  content: "\2192";
+  margin-right: 1rem;
+}
+
+.footer {
+  margin: 50px 0 10px;
+}
+
+/*LINKS*/
+.introduction a:link,
+.introduction a:visited {
+  background-color: #ffffff16;
+  color: whitesmoke;
+  padding: 3px 5px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 5px;
+}
+
+.introduction a:hover,
+.introduction a:active {
+  background-color: #ffffff28;
+}
+
+.navigation a:link,
+.navigation a:visited {
+  background-color: none;
+  color: whitesmoke;
+  text-decoration: none;
+}
+
+.navigation a:hover,
+.navigation a:active {
+  background-color: none;
+  text-decoration: underline;
+}
+
+.recomendations a:link,
+.recomendations a:visited {
+  background-color: none;
+  color: whitesmoke;
+  text-decoration: none;
+}
+
+.recomendations a:hover,
+.recomendations a:active {
+  background-color: none;
+  text-decoration: underline;
+}
+
+.sustainability a:link,
+.sustainability a:visited {
+  background-color: none;
+  color: whitesmoke;
+  text-decoration: underline;
+}
+
+.sustainability a:hover,
+.sustainability a:active {
+  background-color: none;
+  text-decoration: underline;
+}
+
+
+/*BOOK PAGE*/
+/*.book-intro {
+  margin: 0 0 70px;
+}
+
+.book-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0 0 0;
+  display: grid;
+  gap: 15px; 
+  grid-template-columns: repeat(4, 1fr); 
+}
+
+.book-item {
+  background-color: var(--secondary-color);
+  padding: 15px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: end;
+  outline: dashed 1px;
+}
+
+.book-item a:link,
+.book-item a:visited,
+.book-item a:hover,
+.book-item a:active {
+  text-decoration: none;
+  color:whitesmoke
+}
+
+.book-info {
+  font-size: 13px;
+  line-height: 1;
+  display: flex;
+  flex-direction: column; 
+  justify-content:end; 
+  align-items: center;    
+}
+
+.book-name {
+  margin: 5px 1px 2px;
+  line-height: 1.3;
+}
+
+.book-author {
+  margin: 0px 1px 0px;
+}*/
+
+.book-intro {
+  margin: 0 0 70px;
+}
+
+.book-collection-headline {
+  display: block;
+  font-size: 18px;
+  background-color: var(--secondary-hover);
+  padding: 5px 10px 5px;
+  width: fit-content;
+  margin: 10px auto 30px;
+}
+
+.book-list {
+  list-style-type: none;
+  padding: 0 0 0;
+  margin: 10px 0 10px;
+  display: grid;
+  gap: auto; 
+  grid-template-columns: repeat(auto-fit, minmax(163px, 1fr)); 
+}
+
+.book-item {
+  overflow: hidden;
+  position: relative;
+}
+
+.book-item img {
+  display: block; /* Remove default spacing around image */
+  width: 163px;
+  margin: auto;
+}
+
+.book-info2 {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--primary-color);
+  border-radius: 12px;
+  border: 1.5px dashed;
+  padding: 5px 10px;
+  font-size: 13px;
+  position: absolute;
+  bottom: 3.75px; 
+  left: 0; 
+  right: 0; 
+  width: fit-content;
+  margin-inline: auto; 
+  transform: translateY(100%);
+  opacity: 0;
+  transition: transform 0.2s ease, opacity 0.1s ease;
+}
+
+.book-info2 p {
+  margin: 2px;
+}
+
+.book-item:hover .book-info2 {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.book-info2:hover {
+  background-color: var(--secondary-hover);
+}
+
+.book-item a:link,
+.book-item a:visited,
+.book-item a:hover,
+.book-item a:active {
+  text-decoration: none;
+  color:whitesmoke
+}
+
+.book-info {
+  font-size: 13px;
+  line-height: 1;
+  display: flex;
+  flex-direction: column; 
+  justify-content:end; 
+  align-items: center;    
+}
+
+.book-name {
+  margin: 5px 1px 2px;
+  line-height: 1.3;
+}
+
+.book-author {
+  margin: 0px 1px 0px;
+}
+
+
+/*BOOK ANOTATIONS*/
+
+/*.anotations {
+margin: 50px 0 0;
+}
+
+.anotation-item {
+display: flex;
+flex-direction: row;
+margin: 25px 0 20px;
+}
+
+.anotation-book-info {
+  width: 250px;
+  flex-shrink: 0;
+  padding: 15px;
+  background-color: var(--secondary-color);
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: end;
+}
+
+hr .solid {
+  border-top: 3px solid;
+}
+
+.anotation-book-info-text {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+}
+
+.anotation-book-title {
+  margin: 10px 0 5px;
+}
+.anotation-book-author {
+  margin: 5px 0 5px;
+}
+.anotation-book-date {
+  margin: 5px 0 5px;
+}
+
+.anotation-text {
+  padding: 0 20px 5px;
+}
+
+.anotation-text p {
+  margin: 0 0 15px;
+}
+
+.anotation-text h1 {
+  font-size: 23px;
+  margin: 5px 0 0;
+}
+
+.anotation-text h2 {
+  font-size: 20px;
+  margin: 10px 0 20px;
+}
+
+.button {
+    display: inline-block;
+    padding: 5px 10px;
+    background-color: var(--secondary-color);
+    color: whitesmoke;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 10px;
+    font-size: 16px;
+    outline: solid 1px;
+}*/
+
+.anotations {
+margin: 50px 0 0;
+}
+
+.anotation-item {
+display: flex;
+flex-direction: row;
+margin: 25px 0 20px;
+}
+
+.anotation-picture {
+  width: max-content;
+  height: min-content;
+  flex-shrink: 0;
+  background-color: var(--secondary-color);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content:flex-start;
+  overflow:hidden;
+}
+
+.anotation-picture img {
+  border-radius: 12px;
+  overflow: hidden;
+  margin: 20px 0 20px;
+}
+
+hr .solid {
+  border-top: 3px solid;
+}
+
+.anotation-info {
+  padding: 10px 20px 20px;
+  border-radius: 12px;
+}
+
+.anotation-text {
+  margin: 0 0 15px;
+  outline: 1px solid var(--secondary-hover);
+  padding: 10px;
+  border-radius: 12px;
+}
+
+.anotation-text p {
+  margin: 0;
+}
+
+.anotation-text button {
+  display: inline-block;
+  padding: 0;
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  text-decoration: none;
+  font-size: 16px;
+  border: none;
+  box-shadow: none;
+  cursor: pointer;
+  margin: 5px 0 0;
+}
+
+.anotation-info h1 {
+  font-size: 19px;
+  margin: 0;
+}
+
+.anotation-info h2 {
+  font-size: 17px;
+  margin: 10px 0 20px;
+}
+
+.anotation-buttons {
+  margin: 15px 0 0;
+}
+
+.button {
+    display: inline-block;
+    padding: 5px 10px;
+    background-color: var(--secondary-color);
+    color: whitesmoke;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 12px;
+    font-size: 16px;
+    outline: dashed 1px;
+}
+
+.button:hover {
+    background-color: var(--secondary-hover); /* Darker shade on hover */
+}
+
+#more {
+  display: none;
+}
