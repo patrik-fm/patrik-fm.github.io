@@ -20,59 +20,79 @@ body {
 
     font-family: 'Inter', sans-serif;
 }
-  hr {
-    height: 1px;
-    background: var(--secondary-hover);
-    font-size: 0;
-    border: 0;
-  }
 
-  .main { 
-    padding: 0 1rem 3rem;
-    margin: 5rem 0;   
-    color: whitesmoke;
-    height: auto;
-    min-height: 100vh;
-  }
+hr {
+  height: 1px;
+  background: var(--secondary-hover);
+  font-size: 0;
+  border: 0;
+}
+
+.main { 
+  padding: 0 8px 48px;
+  margin: 5rem 0;   
+  color: whitesmoke;
+  height: auto;
+  min-height: 100vh;
+}
 
 .hello {
   margin: 16px 0 40px;
 }
 
+
+/* RSC BADGE */
+
+@media screen and (min-width: 560px) {
+    .badge {
+  position: fixed;
+  top: 25px;
+  right: 5%;
+  z-index: 10;
+  width: auto-fit;
+  }
+}
+
+.badge :hover {
+  rotate: 10deg;
+}
+
+@media screen and (max-width: 560px) {
   .badge {
     position: fixed;
-    top: 25px;
+    bottom: 25px;
     right: 5%;
     z-index: 10;
+    width: auto-fit;
   }
+}
 
-  .badge :hover {
-    rotate: 10deg;
-  }
 
-  .cooking-arena {
-    border-radius: 20px;
-    outline-style: dotted;
-  }
+/* COOKING */
 
-  .terms-and-conditions {
-    max-width: 600px;
-    display: block;
-    flex-direction:column;
-    height: 80%;
-    color:whitesmoke
-  }
+.cooking-arena {
+  border-radius: 20px;
+  outline-style: dotted;
+}
 
-  .navigation {
-    max-width: auto;
-    width: auto;
-    text-align: left;
-    display:inline-block;
-    height: 80%;
-    color:whitesmoke;
-    padding: 0 0 2rem;
-    font-size: 18px;
-  }   
+.terms-and-conditions {
+  max-width: 600px;
+  display: block;
+  flex-direction:column;
+  height: 80%;
+  color:whitesmoke
+}
+
+/* NAVIGATION */
+
+.navigation {
+  max-width: auto;
+  width: auto;
+  text-align: left;
+  color:whitesmoke;
+  padding: 0 0 2rem;
+  font-size: 18px;
+}   
 
   .content {
     max-width: 600px;
@@ -90,6 +110,8 @@ body {
     content:"/";
     color: grey
   }
+
+/* RECOMENDATIONS */
 
 .recomendations {
   border: 1px dashed;
@@ -113,11 +135,14 @@ body {
   margin-right: 1rem;
 }
 
+/* FOOTER */
+
 .footer {
   margin: 50px 0 10px;
 }
 
 /*LINKS*/
+
 .introduction a:link,
 .introduction a:visited {
   background-color: #ffffff16;
@@ -160,70 +185,20 @@ body {
   text-decoration: underline;
 }
 
-.sustainability a:link,
-.sustainability a:visited {
+.responsibility a:link,
+.responsibility a:visited {
   background-color: none;
   color: whitesmoke;
   text-decoration: underline;
 }
 
-.sustainability a:hover,
-.sustainability a:active {
+.responsibility a:hover,
+.responsibility a:active {
   background-color: none;
   text-decoration: underline;
 }
 
-
 /*BOOK PAGE*/
-/*.book-intro {
-  margin: 0 0 70px;
-}
-
-.book-list {
-  list-style-type: none;
-  padding: 0;
-  margin: 0 0 0;
-  display: grid;
-  gap: 15px; 
-  grid-template-columns: repeat(4, 1fr); 
-}
-
-.book-item {
-  background-color: var(--secondary-color);
-  padding: 15px;
-  border-radius: 10px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: end;
-  outline: dashed 1px;
-}
-
-.book-item a:link,
-.book-item a:visited,
-.book-item a:hover,
-.book-item a:active {
-  text-decoration: none;
-  color:whitesmoke
-}
-
-.book-info {
-  font-size: 13px;
-  line-height: 1;
-  display: flex;
-  flex-direction: column; 
-  justify-content:end; 
-  align-items: center;    
-}
-
-.book-name {
-  margin: 5px 1px 2px;
-  line-height: 1.3;
-}
-
-.book-author {
-  margin: 0px 1px 0px;
-}*/
 
 .book-intro {
   margin: 0 0 70px;
@@ -245,49 +220,78 @@ body {
   display: grid;
   gap: auto; 
   grid-template-columns: repeat(auto-fit, minmax(163px, 1fr)); 
+  max-width: 750px;
+  margin-inline: auto;
+  gap: 10px 8px;
 }
 
 .book-item {
   overflow: hidden;
   position: relative;
+  background-color: var(--secondary-color);
+  border-radius: 5px;
 }
 
 .book-item img {
   display: block; /* Remove default spacing around image */
   width: 163px;
+  border-radius: 5px;
   margin: auto;
 }
 
-.book-info2 {
-  display: flex;
-  flex-direction: column;
-  background-color: var(--primary-color);
-  border-radius: 12px;
-  border: 1.5px dashed;
-  padding: 5px 10px;
-  font-size: 13px;
-  position: absolute;
-  bottom: 3.75px; 
-  left: 0; 
-  right: 0; 
-  width: fit-content;
-  margin-inline: auto; 
-  transform: translateY(100%);
-  opacity: 0;
-  transition: transform 0.2s ease, opacity 0.1s ease;
+@media screen and (min-width: 425px) {
+  
+  .book-info {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--primary-color);
+    border-radius: 12px;
+    border: 1.5px dashed;
+    padding: 5px 10px;
+    font-size: 13px;
+    position: absolute;
+    bottom: 3.75px; 
+    left: 0; 
+    right: 0; 
+    width: fit-content;
+    margin-inline: auto; 
+    transform: translateY(100%);
+    opacity: 0;
+    transition: transform 0.2s ease, opacity 0.1s ease;
+  }
+
+  .book-info p {
+    margin: 2px;
+  }
+  
+  .book-item:hover .book-info {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  
+  .book-info:hover {
+    background-color: var(--secondary-hover);
+  }
 }
 
-.book-info2 p {
-  margin: 2px;
-}
+@media screen and (max-width: 425px) {
+  
+  .book-info {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--primary-color);
+    border-radius: 12px;
+    padding: 5px 10px;
+    border: 1.5px dashed;
+    font-size: 12px;
+    width: fit-content;
+    margin-inline: auto;
+    background-color: var(--secondary-hover);
+  }
 
-.book-item:hover .book-info2 {
-  transform: translateY(0);
-  opacity: 1;
-}
-
-.book-info2:hover {
-  background-color: var(--secondary-hover);
+  .book-info p {
+    margin: 2px;
+  }
 }
 
 .book-item a:link,
@@ -298,15 +302,6 @@ body {
   color:whitesmoke
 }
 
-.book-info {
-  font-size: 13px;
-  line-height: 1;
-  display: flex;
-  flex-direction: column; 
-  justify-content:end; 
-  align-items: center;    
-}
-
 .book-name {
   margin: 5px 1px 2px;
   line-height: 1.3;
@@ -315,81 +310,6 @@ body {
 .book-author {
   margin: 0px 1px 0px;
 }
-
-
-/*BOOK ANOTATIONS*/
-
-/*.anotations {
-margin: 50px 0 0;
-}
-
-.anotation-item {
-display: flex;
-flex-direction: row;
-margin: 25px 0 20px;
-}
-
-.anotation-book-info {
-  width: 250px;
-  flex-shrink: 0;
-  padding: 15px;
-  background-color: var(--secondary-color);
-  border-radius: 5px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: end;
-}
-
-hr .solid {
-  border-top: 3px solid;
-}
-
-.anotation-book-info-text {
-  display: flex;
-  flex-direction: column;
-  align-items: left;
-}
-
-.anotation-book-title {
-  margin: 10px 0 5px;
-}
-.anotation-book-author {
-  margin: 5px 0 5px;
-}
-.anotation-book-date {
-  margin: 5px 0 5px;
-}
-
-.anotation-text {
-  padding: 0 20px 5px;
-}
-
-.anotation-text p {
-  margin: 0 0 15px;
-}
-
-.anotation-text h1 {
-  font-size: 23px;
-  margin: 5px 0 0;
-}
-
-.anotation-text h2 {
-  font-size: 20px;
-  margin: 10px 0 20px;
-}
-
-.button {
-    display: inline-block;
-    padding: 5px 10px;
-    background-color: var(--secondary-color);
-    color: whitesmoke;
-    text-align: center;
-    text-decoration: none;
-    border-radius: 10px;
-    font-size: 16px;
-    outline: solid 1px;
-}*/
 
 .anotations {
 margin: 50px 0 0;
